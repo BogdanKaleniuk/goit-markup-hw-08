@@ -1,0 +1,222 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+
+  color: var(--text-hero-black);
+}
+
+.position {
+  margin-bottom: 10px;
+}
+
+.modal-input {
+  width: 100%;
+
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  background-color: transparent;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color: var(--hover-text-color);
+  }
+}
+.texarea {
+  width: 100%;
+  height: 120px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color: var(--hover-text-color);
+  }
+}
+
+.modal-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 4px;
+  margin-left: 0;
+
+  letter-spacing: 0.01em;
+
+  color: var(--text-gray);
+}
+
+.modal-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-texarea {
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  width: 18px;
+  height: 18px;
+
+  position: absolute;
+  left: 15px;
+  top: 50%;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-x {
+  background-color: #ffffff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--hover-text-color);
+  }
+}
+
+.close-button {
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--hover-text-color);
+  }
+}
+
+.modal-check-text {
+  font-size: 14px;
+  line-height: 1.7;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.03em;
+
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.check-icon {
+  width: 16px;
+  height: 15px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+}
+
+.checkbox-link {
+  color: var(--hover-text-color);
+}
+
+.modal-check:checked + .modal-check-text .modal-check-icon {
+  background-color: var(--hover-text-color);
+  border: var(--hover-text-color);
+}
+
+.modal-check:checked + .modal-check-text .check-icon {
+  fill: var(--white-color);
+}
+
+.modal-check-icon {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:focus {
+    border: none;
+    outline-color: var(--hover-text-color);
+  }
+}
+
+.modal-btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  border: none;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 56px;
+  color: var(--white-color);
+  background-color: var(--hover-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
