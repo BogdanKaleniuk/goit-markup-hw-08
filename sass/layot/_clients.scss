@@ -1,19 +1,52 @@
 .our-clients {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
 
   color: var(--text-hero-black);
+  @media screen and (max-width: 479px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 480px) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.18;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .clients-list {
-  display: flex;
+  /* Для десктопа*/
+  /* display: flex; */
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* margin-top: 30px;
+    margin-left: 30px; */
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
 }
 
-.our-container + .our-container {
+/* .our-container + .our-container {
   margin-left: 30px;
+} */
+
+.our-container {
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .our-clients-icon {
@@ -24,8 +57,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 92px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -34,5 +65,20 @@
     border: 1px solid #2196f3;
     /* border-radius: 4px; */
     color: var(--hover-text-color);
+  }
+  @media screen and (max-width: 479px) {
+    height: 92px;
+  }
+  @media screen and (min-width: 480px) {
+    width: 210px;
+    height: 92px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+    height: 92px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    height: 92px;
   }
 }

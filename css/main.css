@@ -877,10 +877,6 @@ body {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-bkcolor:not(:last-child) {
-  /* Для десктопа*/
-  /* margin-right: 30px; */
-}
 @media screen and (min-width: 1200px) {
   .team-bkcolor {
     margin-top: 50px;
@@ -947,22 +943,58 @@ body {
 }
 
 .our-clients {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--text-hero-black);
 }
-
-.clients-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 479px) {
+  .our-clients {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .our-clients {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.18;
+  }
+}
+@media screen and (min-width: 768px) {
+  .our-clients {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-clients {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
-.our-container + .our-container {
+.clients-list {
+  /* Для десктопа*/
+  /* display: flex; */
+}
+@media screen and (min-width: 480px) {
+  .clients-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+    /* margin-top: 30px;
+    margin-left: 30px; */
+  }
+}
+/* .our-container + .our-container {
   margin-left: 30px;
+} */
+@media screen and (max-width: 479px) {
+  .our-container:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .our-clients-icon {
@@ -979,8 +1011,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
-  height: 92px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -991,6 +1021,29 @@ body {
   border: 1px solid #2196f3;
   /* border-radius: 4px; */
   color: var(--hover-text-color);
+}
+@media screen and (max-width: 479px) {
+  .our-clients-image {
+    height: 92px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .our-clients-image {
+    width: 210px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .our-clients-image {
+    width: 226px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-clients-image {
+    width: 170px;
+    height: 92px;
+  }
 }
 
 .footer-style {
@@ -1305,7 +1358,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
+  min-width: 320px;
   min-height: 581px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1315,6 +1368,19 @@ body {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* @media screen and (min-width: 768px) {
+    width: 450px;
+  } */
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+  }
 }
 
 .modal-form {
@@ -1476,6 +1542,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 1199px) {
+  .modal-check-text {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .check-icon {
