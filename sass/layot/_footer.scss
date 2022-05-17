@@ -7,6 +7,17 @@
   background-color: #2f303a;
 }
 
+.footer-logo-info {
+  /* @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
+  } */
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+  }
+}
+
 .address {
   font-style: normal;
 }
@@ -50,8 +61,27 @@
 }
 
 .add-container {
-  display: flex;
-  align-items: baseline;
+  /*  Для десктопа */
+  /* display: flex;
+  align-items: baseline; */
+  /* @media screen and (min-width: 480px) {
+    text-align: center;
+    justify-content: space-around;
+  } */
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer-soc {
@@ -89,7 +119,19 @@
 }
 
 .footer-div {
-  margin-left: 70px;
+  /* @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
+  } */
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .footer-icon + .footer-icon {
@@ -97,7 +139,15 @@
 }
 
 .online-div {
-  margin-left: auto;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 }
 
 .online-input {
@@ -107,13 +157,28 @@
   border-radius: 4px;
   background-color: #2f303a;
 
-  width: 358px;
-  height: 50px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
   outline: transparent;
   color: var(--white-color);
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+    width: 450px;
+    height: 50px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+
+    height: 50px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    width: 358px;
+    height: 50px;
+  }
 }
 
 .post-btn {
@@ -141,12 +206,10 @@
   border-radius: 4px;
   cursor: pointer;
   &:hover,
-&:focus {
-  background-color: #188ce8;
+  &:focus {
+    background-color: #188ce8;
+  }
 }
-}
-
-
 
 .post-icon {
   width: 24px;
