@@ -1,15 +1,30 @@
 .our-team {
-  margin-bottom: 50px;
+  /* Для десктопа*/
+  /* margin-bottom: 50px; */
+
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
 
   color: var(--text-hero-black);
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
 }
 
 .team-developer {
-  display: flex;
+  /* Для десктопа*/
+  /* display: flex; */
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 
 .team {
@@ -17,10 +32,13 @@
 }
 
 .time-img {
-  width: 270px;
-  height: 260px;
-  left: 215px;
-  top: 1635px;
+  width: 100%;
+
+  /* width: 270px;
+  height: 260px; */
+
+  /* left: 215px;
+  top: 1635px; */
 
   border-radius: 0px;
 }
@@ -34,8 +52,12 @@
 
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   color: #212121;
+}
+
+.time-people {
+  margin-bottom: 10px;
 }
 
 .time-vacancy {
@@ -58,7 +80,24 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   &:not(:last-child) {
-    margin-right: 30px;
+    /* Для десктопа*/
+    /* margin-right: 30px; */
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 50px;
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
