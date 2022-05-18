@@ -1323,17 +1323,51 @@ body {
 }
 
 .navigation-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  /* Для десктопа */
+  /* display: flex; 
+  justify-content: center;
+  margin-bottom: 50px;*/
+}
+@media screen and (min-width: 768px) {
+  .navigation-list {
+    /* flex-wrap: wrap;
+    display: flex; */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .navigation-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
-.navigation-list-button:not(:last-child) {
-  margin-right: 8px;
+@media screen and (max-width: 1199px) {
+  .navigation-list-button:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation-list-button:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .button-nav-hero {
