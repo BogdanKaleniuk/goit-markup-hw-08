@@ -68,16 +68,14 @@
     text-align: center;
     justify-content: space-around;
   } */
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     text-align: center;
     justify-content: space-around;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  @media screen and (max-width: 1199px) {
-    text-align: center;
-  }
+
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: baseline;
@@ -93,6 +91,12 @@
   text-transform: uppercase;
 
   color: var(--white-color);
+}
+
+.footer-soc-check {
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .footer-link {
