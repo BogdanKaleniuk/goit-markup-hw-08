@@ -1,6 +1,6 @@
 .mobile-menu-btn {
   position: relative;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   border: none;
@@ -113,6 +113,7 @@
 .mobile-menu {
   display: none;
   @media screen and (max-width: 767px) {
+    z-index: 1;
     padding-top: 10px;
     padding-left: 40px;
     padding-right: 15px;

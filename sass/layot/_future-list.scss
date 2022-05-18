@@ -61,9 +61,21 @@
   &__item {
     /* margin-bottom: 30px; */
     /* margin-right: 30px; */
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+
+      /* margin-right: 30px; */
+    }
 
     @media screen and (min-width: 768px) {
-      flex-basis: calc(100% / 2 - 30px);
+      /* flex-basis: calc(100% / 2 - 30px); */
+      flex-basis: 354px;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
 
       /* margin-right: 30px; */
     }
