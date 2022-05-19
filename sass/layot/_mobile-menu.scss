@@ -65,10 +65,12 @@
 .mobile-menu-contacts {
   margin-bottom: 64px;
   margin-top: auto;
+  padding: 0;
 }
 
 .mobile-menu-list {
   display: flex;
+  padding: 0;
 
   flex-wrap: wrap;
   gap: 10px;
